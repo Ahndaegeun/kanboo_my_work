@@ -12,7 +12,8 @@ export default {
 
 <style scoped>
 .container {
-  border: 1px solid red;
+  border-radius: 5px;
+  background: #2C2F3B;
   height: 340px;
 }
 </style>

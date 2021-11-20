@@ -1,5 +1,5 @@
 <template>
-  <div class="container">
+  <div class="main-container">
 
     <section class="top">
       <Gantt  class="gantt"/>
@@ -55,13 +55,13 @@ export default {
     Member,
     Commit,
     Schedule,
-    Readme
+    Readme,
   }
 }
 </script>
 
 <style scoped>
-.container {
+.main-container {
   padding: 40px;
   display: flex;
   flex-direction: column;

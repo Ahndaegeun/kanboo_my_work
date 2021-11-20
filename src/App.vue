@@ -23,7 +23,7 @@ export default {
   width: 100%;
   display: flex;
   flex-direction: column;
-  background: #2C2F3B;
+  background: #16161A;
 }
 
 nav {
