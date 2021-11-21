@@ -6,9 +6,9 @@
         <table>
           
           <thead>
-            <tr><th>Date</th></tr>
+            <tr><th>Year</th></tr>
 
-            <tr v-for="item in ganttData.itemName"
+            <tr v-for="item in itemData"
                 :key="item">
               <th>{{item.title}}</th>
             </tr>
@@ -22,15 +22,14 @@
               </td>
             </tr>
 
-            <tr>
-              <td v-for="(item, index) in ganttData.dateList"
-                  :key="index">
-                <span class="bar"
-                      :v-if="item < ganttData.itemName[index]">
-                      1
-                </span>
+            <tr v-for="(item, index) in itemData" :key="index">
+              <td v-for="(gantt, gIndex) in ganttData.dateList" :key="gIndex">
+                <span v-if="gIndex < item.frontEmpty"></span>
+                <span v-else-if="gIndex >= item.frontEmpty + item.dateLength"></span>
+                <span class="bar" v-else>1</span>
               </td>
             </tr>
+
           </tbody>
 
         </table>
@@ -44,7 +43,8 @@ export default {
   name: "gantt",
   data() {
     return {
-      ganttData: {}
+      ganttData: {},
+      itemData: []
     }
   },
   methods: {
@@ -66,16 +66,25 @@ export default {
         dateList: list,
         totalDay: result,
         todday: new Date().toLocaleDateString().replaceAll(". ", "-").replace(".", ""),
-        itemName: [
-          {
-            title: "UI design",
-            start: "2021-01-01",
-            end: "2021-01-05"
-          }
-        ]
       }
 
       this.ganttData = data
+      this.itemData = [
+          {
+            title: "UI design",
+            start: "2021-1-1",
+            end: "2021-1-5",
+            frontEmpty: 0,
+            dateLength: 5
+          },
+          {
+            title: "UI design",
+            start: "2021-1-4",
+            end: "2021-1-10",
+            frontEmpty: 3,
+            dateLength: 7
+          },
+      ]
     }
   },
   mounted() {
