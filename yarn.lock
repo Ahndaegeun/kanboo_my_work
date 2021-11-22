@@ -2683,10 +2683,23 @@ coa@^2.0.2:
     chalk "^2.4.1"
     q "^1.1.2"
 
+codemirror-editor-vue3@^0.2.4:
+  version "0.2.4"
+  resolved "https://registry.yarnpkg.com/codemirror-editor-vue3/-/codemirror-editor-vue3-0.2.4.tgz#a12f58bf058ca7be2508afe35b8e448a0ba49c0a"
+  integrity sha512-YsmZKv3UmysXiEFI0NMypvGwTekpNvyh4VP5DYOOTPxD/fSSYG8mfTUvj+0L9bjvdoU12gLQRdQu3afMS7gYiA==
+  dependencies:
+    codemirror "^5.62.3"
+    diff-match-patch "^1.0.5"
+
 codemirror@^5.61.1:
   version "5.63.3"
   resolved "https://registry.yarnpkg.com/codemirror/-/codemirror-5.63.3.tgz#97042a242027fe0c87c09b36bc01931d37b76527"
   integrity sha512-1C+LELr+5grgJYqwZKqxrcbPsHFHapVaVAloBsFBASbpLnQqLw1U8yXJ3gT5D+rhxIiSpo+kTqN+hQ+9ialIXw==
+
+codemirror@^5.62.3:
+  version "5.64.0"
+  resolved "https://registry.yarnpkg.com/codemirror/-/codemirror-5.64.0.tgz#182eec65b62178e3cd1de8f9d88ab819cfe5f625"
+  integrity sha512-fqr6CtDQdJ6iNMbD8NX2gH2G876nNDk+TO1rrYkgWnqQdO3O1Xa9tK6q+psqhJJgE5SpbaDcgdfLmukoUVE8pg==
 
 collection-visit@^1.0.0:
   version "1.0.0"
@@ -3863,6 +3876,11 @@ detect-node@^2.0.4:
   version "2.1.0"
   resolved "https://registry.yarnpkg.com/detect-node/-/detect-node-2.1.0.tgz#c9c70775a49c3d03bc2c06d9a73be550f978f8b1"
   integrity sha512-T0NIuQpnTvFDATNuHN5roPwSBG83rFsuO+MXXH9/3N1eFbn4wcPjttvjMLEPWJ0RGUYgQE7cGgS3tNxbqCGM7g==
+
+diff-match-patch@^1.0.5:
+  version "1.0.5"
+  resolved "https://registry.yarnpkg.com/diff-match-patch/-/diff-match-patch-1.0.5.tgz#abb584d5f10cd1196dfc55aa03701592ae3f7b37"
+  integrity sha512-IayShXAgj/QMXgB0IWmKx+rOPuGMhqm5w6jvFxmVenXKIzRqTAAsbBPT3kWQeGANj3jGgvcvv4yK6SxqYmikgw==
 
 diffie-hellman@^5.0.0:
   version "5.0.3"
@@ -9218,7 +9236,7 @@ vue-radial-progress@^0.3.2:
   resolved "https://registry.yarnpkg.com/vue-radial-progress/-/vue-radial-progress-0.3.2.tgz#3a13f94435c3a5010935c1ff3d4ee5c93bd46d15"
   integrity sha512-F4eA9IFqoY5ZPBJNsqIu3C8J6TQ/5aQxUOAy+6wjVOvK+ljjs/8g8gUpy5CE2/THDH68+avwqov3ibaG1AyZSQ==
 
-vue-router@^4.0.12:
+vue-router@^4.0.12, vue-router@^4.0.2:
   version "4.0.12"
   resolved "https://registry.yarnpkg.com/vue-router/-/vue-router-4.0.12.tgz#8dc792cddf5bb1abcc3908f9064136de7e13c460"
   integrity sha512-CPXvfqe+mZLB1kBWssssTiWg4EQERyqJZes7USiqfW9B5N2x+nHlnsM1D3b5CaJ6qgCvMmYJnz+G0iWjNCvXrg==
@@ -9248,7 +9266,17 @@ vue3-radial-progress@^1.0.5:
   resolved "https://registry.yarnpkg.com/vue3-radial-progress/-/vue3-radial-progress-1.0.5.tgz#1cdc1e96e9097e53a8bb3230f7fc70d877cc1374"
   integrity sha512-Zk94DN4sudx2RK6Ljt1d+ppKEvTAekO/cGLyVzJHmronQZfZrzuIW8EYqOl+zLKuY5aVr5Cye+Pde2uIg+QFgw==
 
-vue@^3.0.0:
+vue3-router-tree@^0.2.4:
+  version "0.2.4"
+  resolved "https://registry.yarnpkg.com/vue3-router-tree/-/vue3-router-tree-0.2.4.tgz#4c42333f8f80e27ddae1e0b8d5f9738f570129a5"
+  integrity sha512-3tlEnYA3HZBt5LbmMprfyCnrBqWINGScpQw59m+BjuKQcRLHkUV4AmYAGsEXPCHBbSX7d7NOhTrXV51n7NvJ/A==
+  dependencies:
+    core-js "^3.6.5"
+    prismjs "^1.23.0"
+    vue "^3.0.0-0"
+    vue-router "^4.0.2"
+
+vue@^3.0.0, vue@^3.0.0-0:
   version "3.2.22"
   resolved "https://registry.yarnpkg.com/vue/-/vue-3.2.22.tgz#46e4dd89e98cc4b851ae1eb35f00ced413a34bb7"
   integrity sha512-KD5nZpXVZquOC6926Xnp3zOvswrUyO9Rya7ZUoxWFQEjFDW4iACtwzubRB4Um2Om9kj6CaJOqAVRDSFlqLpdgw==

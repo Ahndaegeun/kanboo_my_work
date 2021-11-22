@@ -27,6 +27,6 @@ export default {
 
 .java-container > * {
   width: 50%;
-  border: 1px solid #fff;
+  border: 1px solid #999;
 }
 </style>

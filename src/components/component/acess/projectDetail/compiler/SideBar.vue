@@ -6,9 +6,9 @@
         JAVA
         <button class="add-java-btn" type="button">+</button>
       </h2>
-      <ul class="directory">
-        <li>Test.java</li>
-      </ul>
+      <div class="directory">
+        
+      </div>
     </div>
     
     <div class="front-tab">
@@ -25,8 +25,14 @@
 </template>
 
 <script>
+
 export default {
-  name: "sideBar"
+  name: "sideBar",
+  data() {
+    return {
+      
+    }
+  },
 }
 </script>
 
@@ -51,6 +57,7 @@ button {
   display: flex;
   align-items: center;
   border-bottom: 1px solid #999;
+  border-top: 1px solid #999;
 }
 
 .title img {
@@ -61,7 +68,7 @@ button {
   margin-left: auto;
 }
 
-.front-tab .title {
-  border-top: 1px solid #999;
+.directory {
+  height: calc(100% - 46px);
 }
 </style>

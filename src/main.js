@@ -12,6 +12,8 @@ import '@kangc/v-md-editor/lib/theme/style/vuepress.css'
 
 import Prism from 'prismjs'
 
+import Codemirror from 'codemirror-editor-vue3'
+
 VueMarkdownEditor.use(vuepressTheme, {
   Prism
 })
@@ -23,6 +25,7 @@ app.config.globalProperties.axios = axios
 
 app
   .use(router)
+  .use(Codemirror)
   .use(VueMarkdownEditor)
   .component("QuillEditor", QuillEditor)
   .mount('#app')
