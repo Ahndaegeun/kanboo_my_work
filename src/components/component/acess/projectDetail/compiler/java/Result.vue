@@ -1,13 +1,17 @@
 <template>
-  <div></div>
+  <div class="result-container">
+    Result
+  </div>
 </template>
 
 <script>
 export default {
-
+  name: "Result"
 }
 </script>
 
-<style>
-
+<style scoped>
+.result-container {
+  padding: 10px;
+}
 </style>

@@ -51,3 +51,10 @@ a {
   box-sizing: border-box;
   scroll-behavior: smooth;
 }
+
+button {
+  outline: none;
+  border: none;
+  cursor: pointer;
+  background: none;
+}

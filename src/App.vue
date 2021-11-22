@@ -3,17 +3,17 @@
     <nav>
       <a href="#">KanBoo</a>
     </nav>
-    <DashBoard class="dash"/>
+    <Compiler/>
   </div>
 </template>
 
 <script>
-import DashBoard from './components/container/access/projectDetail/DashBoard.vue'
+import Compiler from './components/container/access/projectDetail/compiler/Compiler.vue'
 
 export default {
   name: 'App',
   components: {
-    DashBoard
+    Compiler
   }
 }
 </script>
