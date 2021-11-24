@@ -6071,6 +6071,11 @@ locate-path@^5.0.0:
   dependencies:
     p-locate "^4.1.0"
 
+lodash-es@^4.17.21:
+  version "4.17.21"
+  resolved "https://registry.yarnpkg.com/lodash-es/-/lodash-es-4.17.21.tgz#43e626c46e6591b7750beb2b50117390c609e3ee"
+  integrity sha512-mKnC+QJ9pWVzv+C4/U3rRsHapFfHvQFoFB92e52xeyGMcX6/OlIl78je1u8vePzYZSkkogMPJ2yjxxsb89cxyw==
+
 lodash.debounce@^4.0.8:
   version "4.0.8"
   resolved "https://registry.yarnpkg.com/lodash.debounce/-/lodash.debounce-4.0.8.tgz#82d79bff30a67c4005ffd5e2515300ad9ca4d7af"
@@ -9276,7 +9281,15 @@ vue3-router-tree@^0.2.4:
     vue "^3.0.0-0"
     vue-router "^4.0.2"
 
-vue@^3.0.0, vue@^3.0.0-0:
+vue3-treeview@^0.3.5:
+  version "0.3.5"
+  resolved "https://registry.yarnpkg.com/vue3-treeview/-/vue3-treeview-0.3.5.tgz#9ef7d721a81c004e288fe0d24ec299100f0aa9da"
+  integrity sha512-CFXkUEdmQeS78ipUuK5mtzhnBuF4AxjmX9jxXh4nJRpC6F4rA3i/l8hKS5aS4cltMyiVmdPsxdYq1+d3FP/lIA==
+  dependencies:
+    lodash-es "^4.17.21"
+    vue "^3.1.2"
+
+vue@^3.0.0, vue@^3.0.0-0, vue@^3.1.2:
   version "3.2.22"
   resolved "https://registry.yarnpkg.com/vue/-/vue-3.2.22.tgz#46e4dd89e98cc4b851ae1eb35f00ced413a34bb7"
   integrity sha512-KD5nZpXVZquOC6926Xnp3zOvswrUyO9Rya7ZUoxWFQEjFDW4iACtwzubRB4Um2Om9kj6CaJOqAVRDSFlqLpdgw==

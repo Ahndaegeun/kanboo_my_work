@@ -7,7 +7,7 @@
         <button class="add-java-btn" type="button">+</button>
       </h2>
       <div class="directory">
-        
+        <tree :nodes="nodes" :config="config" />
       </div>
     </div>
     
@@ -25,14 +25,39 @@
 </template>
 
 <script>
+import treeview from "vue3-treeview";
+import "vue3-treeview/dist/style.css";
 
 export default {
   name: "sideBar",
   data() {
     return {
-      
+      config: {
+        roots: ["id1", "id2"],
+        style: {
+          color: "#fff",
+        }
+      },
+      nodes: {
+        id1: {
+          text: "text1",
+          children: ["id11", "id12"],
+        },
+        id11: {
+          text: "text11",
+        },
+        id12: {
+          text: "text12",
+        },
+        id2: {
+          text: "text2",
+        },
+      },
     }
   },
+  components: {
+    tree: treeview
+  }
 }
 </script>
 
@@ -70,5 +95,7 @@ button {
 
 .directory {
   height: calc(100% - 46px);
+  overflow: scroll;
 }
+
 </style>
