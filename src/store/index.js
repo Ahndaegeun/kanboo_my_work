@@ -1,5 +1,4 @@
-import Vue from 'vue'
-import Vuex from 'vuex'
+import { createStore } from 'vuex'
 
 import adminQnA from '@/store/modules/admin/adminQnA.js'
 import userList from '@/store/modules/admin/userList.js'
@@ -32,10 +31,10 @@ import sign from '@/store/modules/noAccess/sign.js'
 import userQnA from '@/store/modules/noAccess/userQnA.js'
 
 
-Vue.use(Vuex)
 
 
-const store = new Vuex.Store({
+
+const store = createStore({
   modules: {
     adminQnA,
     userList,
@@ -44,7 +43,7 @@ const store = new Vuex.Store({
     member,
     menu,
     style,
-    dashBoard,
+    dashBoard: dashBoard,
     erd,
     gantt,
     git,

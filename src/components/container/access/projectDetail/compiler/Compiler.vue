@@ -2,7 +2,7 @@
   <div class="compiler-container">
     <SideBar/>
     <Java/>
-  </div>  
+  </div>
 </template>
 
 <script>

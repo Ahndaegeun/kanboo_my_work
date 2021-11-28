@@ -3,7 +3,7 @@
     <ul class="open-file">
       <li class="file clicked-file">
         <img src="../../../../../../assets/documentIcon.png" alt="">
-        <span class="file-name">Test.java</span>
+        <span class="file-name">{{$store.state.name}}</span>
         <button type="button">X</button>
       </li>
       <li class="file">
