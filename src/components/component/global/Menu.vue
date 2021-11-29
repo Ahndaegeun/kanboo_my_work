@@ -47,6 +47,8 @@ export default {
         "left": {},
         "right": []
       }
+      
+      // console.log(this.$store.state.global.isLogin)
 
       if(path.includes('pdtail')) {
         obj.left = this.list.projectDetail.left
@@ -72,9 +74,15 @@ export default {
           obj.right = this.list.access.right
           break
       }
+
+      if(this.$store.state.global.isLogin) {
+        obj.right = this.list.access.right
+      }
+
       this.menuList = obj
     }
-  }
+  },
+  
 }
 </script>
 

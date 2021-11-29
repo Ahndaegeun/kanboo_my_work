@@ -65,7 +65,7 @@
       },
       {
         "name": "LogOut",
-        "path": "/",
+        "path": "/logout",
         "type": "text"
       }
     ]

@@ -35,6 +35,7 @@ import userQnA from '@/store/modules/noAccess/userQnA.js'
 
 
 const store = createStore({
+  namespace: true,
   modules: {
     adminQnA,
     userList,
