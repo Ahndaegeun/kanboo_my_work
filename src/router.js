@@ -7,6 +7,18 @@ import Community from './components/container/noAccess/Community.vue'
 import Sign from './components/container/noAccess/Sign.vue'
 import Projects from './components/container/access/Projects.vue'
 
+import ProjectDetail from './components/container/access/projectDetail/ProjectDetail.vue'
+import DashBoard from './components/container/access/projectDetail/DashBoard.vue'
+import Scheduler from './components/container/access/projectDetail/Scheduler.vue'
+import Compiler from './components/container/access/projectDetail/compiler/Compiler.vue'
+import Board from './components/container/access/projectDetail/ProjectBoard.vue'
+import Demand from './components/container/access/projectDetail/Demand.vue'
+import Gantt from './components/container/access/projectDetail/GanttChart.vue'
+import GitAndIssue from './components/container/access/projectDetail/GitAndIssue.vue'
+import Setting from './components/container/access/projectDetail/Setting.vue'
+
+
+
 const routes = [
   {
     path: '/',
@@ -28,6 +40,48 @@ const routes = [
     path: '/projects',
     component: Projects,
   },
+  {
+    path: "/pdtail",
+    component: ProjectDetail,
+    children: [
+      {
+        path: "dashboard",
+        component: DashBoard
+      },
+      {
+        path: "scheduler",
+        component: Scheduler
+      },
+      {
+        path: "compiler",
+        component: Compiler
+      },
+      {
+        path: "demand",
+        component: Demand
+      },
+      {
+        path: "board",
+        component: Board
+      },
+      {
+        path: "gantt",
+        component: Gantt
+      },
+      {
+        path: "gitissue",
+        component: GitAndIssue
+      },
+      {
+        path: "erdview",
+        component: DashBoard
+      },
+      {
+        path: "setting",
+        component: Setting
+      },
+    ]
+  }
 ]
 
 const router = createRouter({

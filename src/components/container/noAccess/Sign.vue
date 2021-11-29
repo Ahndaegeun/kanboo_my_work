@@ -1,7 +1,7 @@
 <template>
   <div>
     <h1>Sign</h1>
-    <a href="/projects">goToProjectList</a>
+    <router-link to="/projects">goToProjectList</router-link>
   </div>
 </template>
 

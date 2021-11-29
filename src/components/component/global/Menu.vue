@@ -5,14 +5,19 @@
       <router-link to="/" v-if="menuList.left.type === 'img'">
         <img src="../../../assets/kanboo_logo.png" alt="logo">
       </router-link>
-      <router-link to="/" v-if="menuList.left.type === 'text'">
+      <router-link :to="menuList.left.path" v-if="menuList.left.type === 'text'">
         {{menuList.left.name}}
       </router-link>
     </li>
     <li>
       <ul class="left-menu">
         <li v-for="item in menuList.right" :key="item">
-          <router-link class="route-menu" :to="item.path">{{item.name}}</router-link>
+          <router-link v-if="item.path === nowTab" 
+                      class="route-menu check" 
+                      :to="item.path">{{item.name}}</router-link>
+          <router-link v-if="item.path !== nowTab" 
+                      class="route-menu" 
+                      :to="item.path">{{item.name}}</router-link>
         </li>
       </ul>
     </li>
@@ -30,33 +35,42 @@ export default {
       menuList: {
         "left": {},
         "right": []
-      }
+      },
+      nowTab: ""
     }
   },
   watch: {
     '$route' (to) {
       const path = to.path
+      this.nowTab = path
       const obj = {
         "left": {},
         "right": []
       }
+
+      if(path.includes('pdtail')) {
+        obj.left = this.list.projectDetail.left
+        obj.right = this.list.projectDetail.right
+      } else {
+        obj.left = this.list.noAccess.left
+      }
+
       switch(path) {
         case '/':
-          obj.left = this.list.noAccess.left
           obj.right = this.list.noAccess.home
-          break;
+          break
         case '/community':
-          obj.left = this.list.noAccess.left
           obj.right = this.list.noAccess.community
-          break;
+          break
         case '/signin':
-          obj.left = this.list.noAccess.left
           obj.right = this.list.noAccess.sign
-          break;
+          break
         case '/demo':
-          obj.left = this.list.noAccess.left
           obj.right = this.list.noAccess.home
-          break;
+          break
+        case '/projects':
+          obj.right = this.list.access.right
+          break
       }
       this.menuList = obj
     }
@@ -92,6 +106,10 @@ button {
 }
 
 .route-menu:hover {
+  color: #fff;
+}
+
+.check {
   color: #fff;
 }
 </style>
