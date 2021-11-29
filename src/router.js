@@ -1,20 +1,37 @@
-import { createWebHashHistory, createRouter } from "vue-router"
+import { createWebHistory, createRouter } from "vue-router"
 
-import global from './routers/global'
-import app from '@/App.vue'
+// import global from './routers/global'
+import Home from './components/container/noAccess/Home.vue'
+import Demo from './components/container/noAccess/Demo.vue'
+import Community from './components/container/noAccess/Community.vue'
+import Sign from './components/container/noAccess/Sign.vue'
+import Projects from './components/container/access/Projects.vue'
 
 const routes = [
   {
     path: '/',
-    component: app,
-    children: [
-      ...global,
-    ]
-  }
+    component: Home,
+  },
+  {
+    path: '/community',
+    component: Community,
+  },
+  {
+    path: '/signin',
+    component: Sign,
+  },
+  {
+    path: '/demo',
+    component: Demo
+  },
+  {
+    path: '/projects',
+    component: Projects,
+  },
 ]
 
 const router = createRouter({
-  history: createWebHashHistory(),
+  history: createWebHistory(),
   routes,
 })
 

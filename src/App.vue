@@ -1,24 +1,27 @@
 <template>
   <div class="container">
     <nav>
-      <a href="#">KanBoo</a>
+      <Menu/>
     </nav>
-    <Compiler/>
+    <router-view></router-view>
   </div>
 </template>
 
 <script>
-import Compiler from './components/container/access/projectDetail/compiler/Compiler.vue'
+// import Compiler from './components/container/access/projectDetail/compiler/Compiler.vue'
+import Menu from './components/component/global/Menu.vue'
 
 export default {
   name: 'App',
   components: {
-    Compiler
+    // Compiler,
+    Menu
   }
 }
 </script>
 
 <style scoped>
+
 .container {
   width: 100%;
   display: flex;

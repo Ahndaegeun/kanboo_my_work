@@ -1,0 +1,144 @@
+{
+  "noAccess": {
+    "left":
+      {
+        "name": "kanboo_logo.png",
+        "path": "/",
+        "type": "img"
+      }
+    ,
+    "home": [
+      {
+        "name": "Community",
+        "path": "/community",
+        "type": "text"
+      },
+      {
+        "name": "Sign In",
+        "path": "/signin",
+        "type": "text"
+      }
+    ],
+    "community": [
+      {
+        "name": "Demo",
+        "path": "/demo",
+        "type": "text"
+      },
+      {
+        "name": "Sign In",
+        "path": "/signin",
+        "type": "text"
+      }
+    ],
+    "sign": [
+      {
+        "name": "Community",
+        "path": "/community",
+        "type": "text"
+      },
+      {
+        "name": "Demo",
+        "path": "/demo",
+        "type": "text"
+      }
+    ]
+  },
+  "access": {
+    "left": 
+      {
+        "name": "kanboo_logo.png",
+        "path": "/projects",
+        "type": "img"
+      }
+    ,
+    "right": [
+      {
+        "name": "Projects",
+        "path": "/projects",
+        "type": "text"
+      },
+      {
+        "name": "Community",
+        "path": "/community",
+        "type": "text"
+      },
+      {
+        "name": "LogOut",
+        "path": "/logout",
+        "type": "text"
+      }
+    ]
+  },
+  "projectDetail": {
+    "left": 
+      {
+        "name": "projectName",
+        "path": "/project/dashboard",
+        "type": "text"
+      }
+    ,
+    "right": [
+      {
+        "name": "DashBoard",
+        "path": "/project/dashboard",
+        "type": "text"
+      },
+      {
+        "name": "Scheduler",
+        "path": "/project/scheduler",
+        "type": "text"
+      },
+      {
+        "name": "Compiler",
+        "path": "/project/compiler",
+        "type": "text"
+      },
+      {
+        "name": "Board",
+        "path": "/project/board",
+        "type": "text"
+      },
+      {
+        "name": "Compiler",
+        "path": "/project/compiler",
+        "type": "text"
+      },
+      {
+        "name": "GanttChart",
+        "path": "/project/gantt",
+        "type": "text"
+      },
+      {
+        "name": "Git & Issue",
+        "path": "/project/gitandIssue",
+        "type": "text"
+      },
+      {
+        "name": "ERD & View",
+        "path": "/project/erdandview",
+        "type": "text"
+      },
+      {
+        "name": "Setting",
+        "path": "/project/setting",
+        "type": "text"
+      },
+      {
+        "name": "ProjectList",
+        "path": "/projects",
+        "type": "text"
+      },
+      {
+        "name": "notification",
+        "path": "#",
+        "type": "img"
+      },
+      {
+        "name": "userSetting",
+        "path": "#",
+        "type": "img"
+      }
+    ]
+  }
+}

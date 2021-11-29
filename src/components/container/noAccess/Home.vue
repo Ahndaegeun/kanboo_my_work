@@ -1,5 +1,7 @@
 <template>
-  <div></div>
+  <div>
+    <h1>Hello</h1>
+  </div>
 </template>
 
 <script>
@@ -9,5 +11,7 @@ export default {
 </script>
 
 <style>
-
+h1 {
+  color: #fff;
+}
 </style>
