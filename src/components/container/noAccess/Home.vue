@@ -5,9 +5,7 @@
 </template>
 
 <script>
-document.querySelector("button").addEventListener('click', () => {
-  alert('ok')
-})
+
 export default {
 
 }
