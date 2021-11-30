@@ -18,7 +18,7 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
 .java-container {
   width: 85%;
   display: flex;

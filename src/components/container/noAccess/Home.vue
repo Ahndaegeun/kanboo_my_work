@@ -5,12 +5,15 @@
 </template>
 
 <script>
+document.querySelector("button").addEventListener('click', () => {
+  alert('ok')
+})
 export default {
 
 }
 </script>
 
-<style>
+<style scoped>
 h1 {
   color: #fff;
 }

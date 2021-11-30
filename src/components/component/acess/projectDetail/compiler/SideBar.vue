@@ -43,7 +43,7 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
 .side-bar-container {
   width: 15%;
   display: flex;

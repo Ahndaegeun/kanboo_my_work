@@ -15,7 +15,7 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
 .html-container {
   width: 85%;
   display: flex;
