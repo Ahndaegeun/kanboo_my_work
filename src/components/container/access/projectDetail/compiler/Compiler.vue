@@ -1,20 +1,16 @@
 <template>
   <div class="compiler-container">
     <SideBar/>
-    <Java/>
+    <router-view></router-view>
   </div>
 </template>
 
 <script>
-//import Html from './H.vue'
-import Java from './Java.vue'
 import SideBar from '../../../../component/acess/projectDetail/compiler/SideBar.vue'
 
 export default {
   name: "Compiler",
   components: {
-  //  Html,
-    Java,
     SideBar
   }
 }

@@ -91,7 +91,7 @@
       },
       {
         "name": "Compiler",
-        "path": "/pdtail/compiler",
+        "path": "/pdtail/compiler/backend",
         "type": "text"
       },
       {

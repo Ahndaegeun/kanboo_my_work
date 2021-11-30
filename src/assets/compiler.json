@@ -1,0 +1,37 @@
+[
+  {
+    "idx": 1,
+    "classification": "directory",
+    "name": "src",
+    "parentIdx": 0,
+    "depth": 0
+  },
+  {
+    "idx": 2,
+    "classification": "directory",
+    "name": "vo",
+    "parentIdx": 1,
+    "depth": 1
+  },
+  {
+    "idx": 3,
+    "classification": "directory",
+    "name": "dao",
+    "parentIdx": 1,
+    "depth": 1
+  },
+  {
+    "idx": 4,
+    "classification": "file",
+    "name": "file",
+    "parentIdx": 2,
+    "depth": 2
+  },
+  {
+    "idx": 5,
+    "classification": "file",
+    "name": "file",
+    "parentIdx": 3,
+    "depth": 2
+  }
+]

@@ -3,60 +3,45 @@
     <div class="back-tab">
       <h2 class="title">
         <img src="../../../../../assets/documentIcon.png" alt="/">
-        JAVA
+        <router-link to="/pdtail/compiler/backend">JAVA</router-link>
         <button class="add-java-btn" type="button">+</button>
       </h2>
       <div class="directory">
-        <tree :nodes="nodes" :config="config" />
+        <modal-button></modal-button>
       </div>
     </div>
     
-    <div class="front-tab">
+    <!-- <div class="front-tab">
       <h2 class="title">
         <img src="../../../../../assets/documentIcon.png" alt="/">
-        Front
+        <router-link to="/pdtail/compiler/frontend">Front</router-link>
         <button class="add-front-btn" type="button">+</button>
       </h2>
       <ul class="directory">
         <li>Test.html</li>
       </ul>
-    </div>
+    </div> -->
   </div>
 </template>
 
 <script>
-import treeview from "vue3-treeview";
-import "vue3-treeview/dist/style.css";
+import compileData from "../../../../../assets/compiler.json"
 
 export default {
   name: "sideBar",
   data() {
     return {
-      config: {
-        roots: ["id1", "id2"],
-        style: {
-          color: "#fff",
-        }
-      },
-      nodes: {
-        id1: {
-          text: "text1",
-          children: ["id11", "id12"],
-        },
-        id11: {
-          text: "text11",
-        },
-        id12: {
-          text: "text12",
-        },
-        id2: {
-          text: "text2",
-        },
-      },
+      compileData: compileData,
+      dataObj: {},
+      directoryDepth: 0,
     }
   },
-  components: {
-    tree: treeview
+  mounted() {
+    for(let item of this.compileData) {
+      this.directoryDepth = item.depth > this.directoryDepth ? item.depth : this.directoryDepth
+
+
+    }
   }
 }
 </script>

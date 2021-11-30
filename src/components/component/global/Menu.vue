@@ -15,7 +15,7 @@
           <router-link v-if="item.path === nowTab" 
                       class="route-menu check" 
                       :to="item.path">{{item.name}}</router-link>
-          <router-link v-if="item.path !== nowTab" 
+          <router-link v-else-if="item.path !== nowTab" 
                       class="route-menu" 
                       :to="item.path">{{item.name}}</router-link>
         </li>

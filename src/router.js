@@ -10,7 +10,11 @@ import Projects from './components/container/access/Projects.vue'
 import ProjectDetail from './components/container/access/projectDetail/ProjectDetail.vue'
 import DashBoard from './components/container/access/projectDetail/DashBoard.vue'
 import Scheduler from './components/container/access/projectDetail/Scheduler.vue'
+
 import Compiler from './components/container/access/projectDetail/compiler/Compiler.vue'
+import Java from './components/container/access/projectDetail/compiler/Java.vue'
+import HTML from './components/container/access/projectDetail/compiler/HTML.vue'
+
 import Board from './components/container/access/projectDetail/ProjectBoard.vue'
 import Demand from './components/container/access/projectDetail/Demand.vue'
 import Gantt from './components/container/access/projectDetail/GanttChart.vue'
@@ -54,7 +58,17 @@ const routes = [
       },
       {
         path: "compiler",
-        component: Compiler
+        component: Compiler,
+        children: [
+          {
+            path: "backend",
+            component: Java
+          },
+          {
+            path: "frontend",
+            component: HTML
+          }
+        ]
       },
       {
         path: "demand",

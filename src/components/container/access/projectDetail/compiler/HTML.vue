@@ -1,13 +1,24 @@
 <template>
-<div></div>  
+  <div class="html-container">
+    <EditAndResult/>
+  </div>  
 </template>
 
 <script>
-export default {
+import EditAndResult from '../../../../component/acess/projectDetail/compiler/html/EditAndResult.vue'
 
+export default {
+  name: "htmlCompiler",
+  components: {
+    EditAndResult
+  }
 }
 </script>
 
 <style>
-
+.html-container {
+  width: 85%;
+  display: flex;
+  justify-content: space-between;
+}
 </style>
