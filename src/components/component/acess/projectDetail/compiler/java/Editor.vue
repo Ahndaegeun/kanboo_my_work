@@ -1,9 +1,9 @@
 <template>
   <div class="editor-container">
     <div class="code-container">
-      <Codemirror :value="code"
-                  :options="cmOptions"
-                  border/>
+      <Codemirror v-model:value="code"
+                :options="cmOptions"
+                style="width: 100%"/>
     </div>
     <button class="run-btn"
             type="button"
@@ -12,24 +12,25 @@
 </template>
 
 <script>
+import Codemirror from "codemirror-editor-vue3";
 import "codemirror-editor-vue3/dist/style.css"
 import "codemirror/theme/dracula.css"
+import "codemirror/mode/javascript/javascript.js";
 
 export default {
   name: "Editor",
+  components: { Codemirror },
   data() {
     return {
-      code: `public class Test{
-        System.out.println("Hello World!!!");
-}`,
+      code: ``,
       cmOptions: {
-        mode: 'log',
+        mode: 'text/javascript',
         theme: 'dracula',
         lineNumbers: true,
         smartIndent: true,
-        indentUnit: 4,
-        foldFutter: true,
-        styleActiceLine: true
+        indentUnit: 2,
+        foldGutter: true,
+        styleActiveLine: true,
       }
     }
   },
