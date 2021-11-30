@@ -1,37 +1,44 @@
 [
   {
-    "idx": 1,
+    "id": 1,
     "classification": "directory",
-    "name": "src",
-    "parentIdx": 0,
-    "depth": 0
+    "label": "src",
+    "parent_id": "undefined"
   },
   {
-    "idx": 2,
+    "id": 2,
     "classification": "directory",
-    "name": "vo",
-    "parentIdx": 1,
-    "depth": 1
+    "label": "vo",
+    "parent_id": 1
   },
   {
-    "idx": 3,
+    "id": 3,
     "classification": "directory",
-    "name": "dao",
-    "parentIdx": 1,
-    "depth": 1
+    "label": "dao",
+    "parent_id": 1
   },
   {
-    "idx": 4,
+    "id": 4,
     "classification": "file",
-    "name": "file",
-    "parentIdx": 2,
-    "depth": 2
+    "label": "file",
+    "parent_id": 2
   },
   {
-    "idx": 5,
+    "id": 5,
     "classification": "file",
-    "name": "file",
-    "parentIdx": 3,
-    "depth": 2
+    "label": "file",
+    "parent_id": 3
+  },
+  {
+    "id": 6,
+    "classification": "directory",
+    "label": "addr",
+    "parent_id": 2
+  },
+  {
+    "id": 10,
+    "classification": "file",
+    "label": "hello",
+    "parent_id": 6
   }
 ]

@@ -1,25 +1,5 @@
 <template>
   <div class="editor-container">
-    <ul class="open-file">
-      <li class="file clicked-file">
-        <img src="../../../../../../assets/documentIcon.png" alt="">
-        <span class="file-name">{{$store.state.name}}</span>
-        <button type="button">X</button>
-      </li>
-      <li class="file">
-        <img src="../../../../../../assets/documentIcon.png" alt="">
-        <span class="file-name">Test.java</span>
-        <button type="button">X</button>
-      </li>
-      <li class="file">
-        <img src="../../../../../../assets/documentIcon.png" alt="">
-        <span class="file-name">Test.java</span>
-        <button type="button">X</button>
-      </li>
-      <li class="more-file">
-        <button type="button">...</button>
-      </li>
-    </ul>
     <div class="code-container">
       <Codemirror :value="code"
                   :options="cmOptions"
@@ -112,7 +92,7 @@ export default {
 }
 
 .code-container {
-  height: calc(100% - 40px);
+  height: 100%;
 }
 
 .code-container > * {
@@ -121,7 +101,7 @@ export default {
 
 .run-btn {
   position: absolute;
-  top: 45px;
+  top: 15px;
   right: 10px;
   z-index: 10;
 }

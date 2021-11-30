@@ -7,11 +7,11 @@
         <button class="add-java-btn" type="button">+</button>
       </h2>
       <div class="directory">
-        <modal-button></modal-button>
+        <Tree :nodes="dataObj"/>
       </div>
     </div>
     
-    <!-- <div class="front-tab">
+    <div class="front-tab">
       <h2 class="title">
         <img src="../../../../../assets/documentIcon.png" alt="/">
         <router-link to="/pdtail/compiler/frontend">Front</router-link>
@@ -20,29 +20,26 @@
       <ul class="directory">
         <li>Test.html</li>
       </ul>
-    </div> -->
+    </div>
   </div>
 </template>
 
 <script>
+import Tree from 'vue3-tree'
+import "vue3-tree/dist/style.css";
 import compileData from "../../../../../assets/compiler.json"
+import arrayToTree from 'array-to-tree'
 
 export default {
   name: "sideBar",
+  components: {
+    Tree
+  },
   data() {
     return {
-      compileData: compileData,
-      dataObj: {},
-      directoryDepth: 0,
+      dataObj : arrayToTree(compileData, {childrenProperty: 'nodes'}),
     }
   },
-  mounted() {
-    for(let item of this.compileData) {
-      this.directoryDepth = item.depth > this.directoryDepth ? item.depth : this.directoryDepth
-
-
-    }
-  }
 }
 </script>
 
