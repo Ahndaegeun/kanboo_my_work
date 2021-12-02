@@ -111,12 +111,12 @@
       },
       {
         "name": "Git & Issue",
-        "path": "/pdtail/gitandIssue",
+        "path": "/pdtail/gitIssue",
         "type": "text"
       },
       {
         "name": "ERD & View",
-        "path": "/pdtail/erdandview",
+        "path": "/pdtail/erdview/erd",
         "type": "text"
       },
       {

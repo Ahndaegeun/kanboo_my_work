@@ -9,6 +9,7 @@
 
 <script>
 // import Compiler from './components/container/access/projectDetail/compiler/Compiler.vue'
+import '../public/reset.css'
 import Menu from './components/component/global/Menu.vue'
 
 export default {

@@ -19,6 +19,10 @@ import Board from './components/container/access/projectDetail/ProjectBoard.vue'
 import Demand from './components/container/access/projectDetail/Demand.vue'
 import Gantt from './components/container/access/projectDetail/GanttChart.vue'
 import GitAndIssue from './components/container/access/projectDetail/GitAndIssue.vue'
+
+import ErdAndView from './components/container/access/projectDetail/ErdAndView.vue'
+import Table from './components/component/acess/projectDetail/erdAndView/erd/Table.vue'
+
 import Setting from './components/container/access/projectDetail/Setting.vue'
 
 
@@ -88,7 +92,13 @@ const routes = [
       },
       {
         path: "erdview",
-        component: DashBoard
+        component: ErdAndView,
+        children: [
+          {
+            path: "erd",
+            component: Table
+          }
+        ]
       },
       {
         path: "setting",
