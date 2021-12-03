@@ -18,6 +18,7 @@
           <span>name</span>
           <span>type</span>
           <span>constraint</span>
+          <span>references</span>
         </li>
 
         <li class="list-body"
@@ -25,11 +26,21 @@
             :key="item">
           <input v-model="item.name" type="text" placeholder="name"/>
           <input v-model="item.type" type="text" placeholder="type"/>
-          <input v-model="item.constraint" type="text" placeholder="constraint"/>
+
+          <select v-model="item.constraint">
+            <option>null</option>
+            <option>pk</option>
+            <option>fk</option>
+          </select>
+
+          <select v-model="item.references">
+            <option>null</option>
+            <option v-for="item in $store.state.erd.relation['primaryKey']" :key="item">{{item[0].table}}</option>
+          </select>
         </li>
       </ul>
 
-      <button @click="createTable"
+      <button @click="create"
               class="add-table-btn"
               type="button">create table</button>
     </div>
@@ -42,7 +53,7 @@ export default {
   name: "table",
   data() {
     return {
-      
+
     }
   },
   methods: {
@@ -50,8 +61,13 @@ export default {
       openAndClose: 'erd/openAndClose',
       addCol: 'erd/addCol',
       delCol: 'erd/delCol',
-      createTable: 'erd/createTable'
+      createTable: 'erd/createTable',
+      setRelation: 'erd/setRelation'
     }),
+    create() {
+      this.createTable()
+      this.setRelation()
+    }
   }
 }
 </script>
@@ -86,7 +102,7 @@ input {
   background: #2C2F3B;
   color: #fff;
   padding: 5px 10px;
-  width: 25vw;
+  width: fit-content;
   border-radius: 5px;
 }
 

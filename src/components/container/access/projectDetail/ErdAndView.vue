@@ -8,13 +8,17 @@
               :topData="$store.state.erd.sideBarData.topData"
               :isTree="false"
               :textColor="$store.state.erd.sideBarData.textColor"/>
+
     <router-view></router-view>
+
+    <ShowQuery v-if="$store.state.erd.isShowQuery"/>
   </div>
 </template>
 
 <script>
 import { mapMutations } from 'vuex'
 import SideBar from '../../../component/acess/projectDetail/erdAndView/SideBar.vue'
+import ShowQuery from '../../../component/acess/projectDetail/erdAndView/erd/ShowQuery.vue'
 
 export default {
   name: "erd",
@@ -25,14 +29,13 @@ export default {
   },
   components: {
     SideBar,
+    ShowQuery
   },
   methods: {
     ...mapMutations({
-      exportQuery: 'erd/exportQuery'
     })
   },
   mounted() {
-    this.exportQuery()
   }
 }
 </script>
@@ -41,6 +44,7 @@ export default {
 .erd-container {
   height: calc(100vh - 70px);
   display: flex;
+  position: relative;
 }
 
 </style>

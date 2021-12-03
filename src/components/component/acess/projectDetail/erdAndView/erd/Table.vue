@@ -15,10 +15,6 @@
                     v-if="!item.isModify"
                     type="button"
                     class="table-mod-btn">Mod</button>
-            <button @click="cancel(item)"
-                    v-if="item.isModify"
-                    type="button"
-                    class="table-mod-btn">cancel</button>
             <button @click="modifyTable(item)"
                     v-if="item.isModify"
                     type="button"
@@ -29,9 +25,21 @@
           <li v-for="col of item.columns"
               :key="col"
               class="col-wrap">
-            <input type="text" :readonly="!item.isModify" class="name" v-model="col.name">
-            <input type="text" :readonly="!item.isModify" class="type" v-model="col.type">
-            <input type="text" :readonly="!item.isModify" class="constraint" v-model="col.constraint">
+            <input type="text" 
+                  placeholder="name" 
+                  :readonly="!item.isModify" 
+                  class="name" 
+                  v-model="col.name">
+            <input type="text" 
+                  placeholder="type" 
+                  :readonly="!item.isModify" 
+                  class="type" 
+                  v-model="col.type">
+            <input type="text" 
+                  placeholder="constraint" 
+                  :readonly="!item.isModify" 
+                  class="constraint" 
+                  v-model="col.constraint">
           </li>
         </ul>
       </li>
@@ -73,7 +81,7 @@ export default {
 <style scoped>
 .table-container {
   border: 1px solid #999;
-  width: 100%;
+  width: 85%;
   position: relative;
   padding: 30px;
 }

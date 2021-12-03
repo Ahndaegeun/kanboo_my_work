@@ -57,14 +57,14 @@
         "name": "mem_idx",
         "type": "number",
         "constraint": "fk",
-        "references": 1
+        "references": "Member"
       },
       {
         "table": "Board",
         "name": "mem_id",
         "type": "varchar2(100)",
         "constraint": "fk",
-        "references": 1
+        "references": "Member"
       }
     ],
     "isModify": false
@@ -92,21 +92,21 @@
         "name": "board_idx",
         "type": "number",
         "constraint": "fk",
-        "references": 2
+        "references": "Board"
       },
       {
         "table": "Comment",
         "name": "mem_idx",
         "type": "number",
         "constraint": "fk",
-        "references": 1
+        "references": "Member"
       },
       {
         "table": "Comment",
         "name": "mem_id",
         "type": "varchar2(100)",
         "constraint": "fk",
-        "references": 1
+        "references": "Member"
       }
     ],
     "isModify": false
