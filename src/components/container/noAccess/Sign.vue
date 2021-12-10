@@ -1,18 +1,27 @@
 <template>
-  <div>
-    <h1>Sign</h1>
-    <router-link to="/projects">goToProjectList</router-link>
+  <div class="sign-container">
+    <Terminal />
   </div>
 </template>
 
 <script>
-export default {
+import Terminal from "@/components/component/noAccess/home/Terminal.vue";
 
-}
+export default {
+  name: "Sign",
+  components: {
+    Terminal,
+  },
+};
 </script>
 
 <style scoped>
-a {
-  color: #fff;
+.sign-container{
+  position: relative;
+  width: 100%;
+  height: calc(100vh - 70px);
+  background: #16161a;
+  overflow: hidden;
+  color: white;
 }
 </style>

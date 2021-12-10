@@ -61,7 +61,8 @@ export default {
         case '/':
           obj.right = this.list.noAccess.home
           break
-        case '/community':
+        case '/community/free':
+        case '/community/qna':
           obj.right = this.list.noAccess.community
           break
         case '/signin':

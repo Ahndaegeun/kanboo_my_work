@@ -1,21 +1,21 @@
 <template>
   <div>
-    <h1>Hello</h1>
+    <VideoView/>
+    <HowToUse/>
   </div>
 </template>
 
 <script>
+import HowToUse from '@/components/component/noAccess/Sign/HowToUse.vue';
+import VideoView from '@/components/component/noAccess/Sign/VideoView.vue';
 
-export default {  
-  data() {
-    return {
-    }
-  },
-}
+export default {
+  components:{
+    VideoView,
+    HowToUse,
+  }
+};
 </script>
 
 <style scoped>
-h1 {
-  color: #fff;
-}
 </style>

@@ -10,7 +10,7 @@
     "home": [
       {
         "name": "Community",
-        "path": "/community",
+        "path": "/community/free",
         "type": "text"
       },
       {
@@ -34,7 +34,7 @@
     "sign": [
       {
         "name": "Community",
-        "path": "/community",
+        "path": "/community/free",
         "type": "text"
       },
       {
@@ -60,7 +60,7 @@
       },
       {
         "name": "Community",
-        "path": "/community",
+        "path": "/community/free",
         "type": "text"
       },
       {

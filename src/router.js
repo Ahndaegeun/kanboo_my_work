@@ -3,7 +3,11 @@ import { createWebHistory, createRouter } from "vue-router"
 // import global from './routers/global'
 import Home from './components/container/noAccess/Home.vue'
 import Demo from './components/container/noAccess/Demo.vue'
+
 import Community from './components/container/noAccess/Community.vue'
+import Free from './components/component/noAccess/Community/Free.vue'
+import QnA from './components/component/noAccess/Community/QnA.vue'
+
 import Sign from './components/container/noAccess/Sign.vue'
 import Projects from './components/container/access/Projects.vue'
 
@@ -35,6 +39,16 @@ const routes = [
   {
     path: '/community',
     component: Community,
+    children: [
+      {
+        path: "free",
+        component: Free
+      },
+      {
+        path: "qna",
+        component: QnA
+      },
+    ]
   },
   {
     path: '/signin',
